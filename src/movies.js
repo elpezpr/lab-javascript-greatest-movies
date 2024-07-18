@@ -15,11 +15,15 @@ function howManyMovies(moviesArray) {
 
 // Iteration 3: All scores average - Get the average of all scores with 2 decimals
 function scoresAverage(moviesArray) {
+    if (moviesArray.length === 0) return 0;
+
+    const totalScore = moviesArray.reduce((sum, movie) => sum + movie.score, 0);
+    const averageScore = totalScore / moviesArray.length;
+    return parseFloat(averageScore.toFixed(2));
 }
 
 // Iteration 4: Drama movies - Get the average of Drama Movies
-function dramaMoviesScore(moviesArray) {
-}
+function dramaMoviesScore(moviesArray) {}
 
 // Iteration 5: Ordering by year - Order by year, ascending (in growing order)
 function orderByYear(moviesArray) {}
